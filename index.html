@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>TODO</h1>
+      <input
+        type="text"
+        placeholder="Create a new todo..."
+        onkeydown="if (event.keyCode == 13) addTask()"
+      />
+      <ul></ul>
+      <div class="filters">
+        <button class="filter-btn active" onclick="showAll(event)">
+          All Tasks
+          <button class="filter-btn" onclick="showPending(event)">
+            Pending Tasks
+          </button>
+        </button>
+        <button class="filter-btn" onclick="showCompleted(event)">
+          Completed Tasks
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
